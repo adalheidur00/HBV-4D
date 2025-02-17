@@ -3,8 +3,33 @@
 - opna terminal, fara í möppuna 
 - git clone https://github.com/adalheidur00/HVD-4D.git
 - opna repo í intellij
-- 
 
+## Vinna á github
+í terminal í intellij
+- git checkout main (fara í main branch)
+- git pull origin (nýjasta útgafa af main)
+###
+Búa til nýjan branch þannig ef eitthvað klikkar hjá einum þá eyðileggst ekki allt forritið
+###
+- git checkout -b nafn_á_branch(nota það sem er verið að bæta við, t.d. branch fyrir login page eða ehv)
+###
+til að vista það sem er búið á github að gera þá
+###
+
+- git add . 
+- git commit -m "texti um það sem var gert(þarf að gera til að það se hægt að pusha)"
+- git push -u origin nafn_á_branch
+
+Svo þarf að fara inn á github og í repo og gera pull requestu 
+og svo þarf að sameina branchin sem var verið að vinna á við main(held að bara ég geti gert það því ég "á" repoið þannig senda á messenger ef búið er að gera ehv)
+
+og svo bara endurtaka þegar það á að gera eitthvað annað.
+
+git checkout nafn_á_branch færir þig í nafn_á_branch svo ef verkefninu er lokað og það á að halda áfram að vinna í einhverju ákveðnu branchi þá:
+
+- git branch (til að sjá á hvað branch þú ert, kemur grænt í terminal)
+- ef í öðrum branch þá - git checkout nafn_á_branch
+- svo git pull origin nafn_á_branch til að fá nýjustu útgáfu(ef einhver annar er búinn að bæta einhverju t.d. )
 
 ### Ef það koma fullt af villum við keyrslu sem virðast ekki tengjast neinu ákvðenu
 ### t.d :
