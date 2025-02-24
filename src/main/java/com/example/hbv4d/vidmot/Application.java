@@ -1,4 +1,4 @@
-package com.example.hbv4d;
+package com.example.hbv4d.vidmot;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -12,7 +12,8 @@ public class Application extends javafx.application.Application {
     @Override
     public void start(Stage stage) throws IOException {
         primaryStage = stage;
-        switchScene("index-view.fxml");
+        switchScene("/com/example/hbv4d/index-view.fxml");
+
     }
 
     public static void switchScene(String fxmlFile) throws IOException {

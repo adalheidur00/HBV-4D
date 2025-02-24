@@ -1,4 +1,4 @@
-package com.example.hbv4d;
+package com.example.hbv4d.vidmot;
 
 import javafx.fxml.FXML;
 
@@ -10,12 +10,12 @@ public class IndexController {
      */
     @FXML
     public void onBrowseTours() throws Exception{
-        Application.switchScene("browseTour-view.fxml");
+        Application.switchScene("/com/example/hbv4d/browseTour-view.fxml");
     }
 
     @FXML
     public void onLogin() throws Exception{
-        Application.switchScene("login-view.fxml");
+        Application.switchScene("/com/example/hbv4d/login-view.fxml");
     }
 
 }

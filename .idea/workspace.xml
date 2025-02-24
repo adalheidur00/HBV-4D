@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb9a4957-c39d-4883-8c00-040e22e92b34" name="Changes" comment="" />
+    <list default="true" id="bb9a4957-c39d-4883-8c00-040e22e92b34" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../Skóli/V25/HBV401/HBV-4D/src/main/java/com/example/hbv4d/vidmot/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Skóli/V25/HBV401/HBV-4D/src/main/java/com/example/hbv4d/vinnsla/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Skóli/V25/HBV401/HBV-4D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Skóli/V25/HBV401/HBV-4D/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Skóli/V25/HBV401/HBV-4D/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Skóli/V25/HBV401/HBV-4D/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Skóli/V25/HBV401/HBV-4D/src/main/java/com/example/hbv4d/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Skóli/V25/HBV401/HBV-4D/src/main/java/com/example/hbv4d/vidmot/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Skóli/V25/HBV401/HBV-4D/src/main/java/com/example/hbv4d/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Skóli/V25/HBV401/HBV-4D/src/main/java/com/example/hbv4d/vidmot/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Skóli/V25/HBV401/HBV-4D/src/main/java/com/example/hbv4d/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Skóli/V25/HBV401/HBV-4D/src/main/java/com/example/hbv4d/ToursController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Skóli/V25/HBV401/HBV-4D/src/main/java/com/example/hbv4d/vidmot/ToursController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Skóli/V25/HBV401/HBV-4D/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Skóli/V25/HBV401/HBV-4D/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Skóli/V25/HBV401/HBV-4D/src/main/resources/com/example/hbv4d/index-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Skóli/V25/HBV401/HBV-4D/src/main/resources/com/example/hbv4d/index-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Skóli/V25/HBV401/HBV-4D/src/main/resources/com/example/hbv4d/login-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Skóli/V25/HBV401/HBV-4D/src/main/resources/com/example/hbv4d/login-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Skóli/V25/HBV401/HBV-4D/src/main/resources/com/example/hbv4d/tours-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Skóli/V25/HBV401/HBV-4D/src/main/resources/com/example/hbv4d/tours-view.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +81,7 @@
     "Application.IndexApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "loginpage",
     "last_opened_file_path": "/Users/adalheidur/Desktop/Skóli/V25/HBV401/HBV-4D",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
