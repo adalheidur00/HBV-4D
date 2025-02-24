@@ -29,6 +29,7 @@ git checkout nafn_á_branch færir þig í nafn_á_branch svo ef verkefninu er l
 
 - git branch (til að sjá á hvað branch þú ert, kemur grænt í terminal)
 - ef í öðrum branch þá - git checkout nafn_á_branch
+- git fetch origin
 - svo git pull origin nafn_á_branch til að fá nýjustu útgáfu(ef einhver annar er búinn að bæta einhverju t.d. )
 
 ### Ef það koma fullt af villum við keyrslu sem virðast ekki tengjast neinu ákvðenu
