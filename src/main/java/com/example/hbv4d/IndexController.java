@@ -1,14 +1,21 @@
 package com.example.hbv4d;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 
 public class IndexController {
+
+    /**
+     * Færir user í browseTour senu
+     * @throws Exception
+     */
     @FXML
-    private Label welcomeText;
+    public void onBrowseTours() throws Exception{
+        Application.switchScene("browseTour-view.fxml");
+    }
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Forsíða");
+    public void onLogin() throws Exception{
+        Application.switchScene("login-view.fxml");
     }
+
 }
