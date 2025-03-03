@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb9a4957-c39d-4883-8c00-040e22e92b34" name="Changes" comment="" />
+    <list default="true" id="bb9a4957-c39d-4883-8c00-040e22e92b34" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/DataBase/DataBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/DataBase/UserData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/Tour.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/db/hbv4d.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/db/hbv4d.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/index-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/index-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/login-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/login-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/tours-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/tours-view.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,7 +40,7 @@
     <toolWindowToFront>false</toolWindowToFront>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../Skóli/V25/HBV401/HBV-4D" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -69,13 +83,19 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/adalheidur/Desktop/Skóli/V25/HBV401/HBV-4D",
+    "last_opened_file_path": "/Users/adalheidur/Desktop/HVD-4D/src/main/resources/com/example/hbv4d",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/com/example/hbv4d" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/example/hbv4d" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-ea" />
