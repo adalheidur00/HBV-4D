@@ -1,18 +1,24 @@
 package com.example.hbv4d;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 public class IndexController {
     @FXML
     public Label fxLoggedIn;
 
+    @FXML
+    private Button fxWishlistButton;
 
     @FXML
     public void initialize(){
         String user = User.getLoggedIn();
         if (user != null) {
             fxLoggedIn.setText("User: " + user);
+            fxWishlistButton.setDisable(false);
+        } else {
+            fxWishlistButton.setDisable(true);
         }
     }
     /**
@@ -27,6 +33,11 @@ public class IndexController {
     @FXML
     public void onLogin() throws Exception{
         Application.switchScene("login-view.fxml");
+    }
+
+    @FXML
+    public void onWishList() throws Exception{
+        Application.switchScene("wishlist-view.fxml");
     }
 
 }

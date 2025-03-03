@@ -24,6 +24,7 @@ public class ToursController {
 
     public AnchorPane infoPane;
     public Text descriptionText;
+    public Text scheduleText;
     public Label descriptionTitle;
     public Label dateLabel;
 
@@ -33,14 +34,14 @@ public class ToursController {
 
     @FXML
     public void initialize(){
-
         // Mock data
         tours.addAll(
-                new Tour(1, "Golden Circle", "Visit the golden circle in one day!", 12000, LocalDate.of(2024, 3, 10),"Reykjavik"),
-                new Tour(2, "Northern Lights", "See the northen lights in the north", 8000, LocalDate.of(2024, 3, 15),"Akureyri"),
-                new Tour(3, "Blue Lagoon","Spend a day in the blue lagoon", 35000, LocalDate.of(2024, 3, 20), "Reykjavik"),
-                new Tour(4, "Volcano Hike","Volcano hike in the south", 9000, LocalDate.of(2024, 3, 12), "Vik")
+                new Tour(1, "Golden Circle", "Visit the golden circle in one day!", 12000, LocalDate.of(2024, 3, 10),"Reykjavik", "We leave at 8am and are back at pickup place around 8pm"),
+                new Tour(2, "Northern Lights", "See the northern lights in the north", 8000, LocalDate.of(2024, 3, 15),"Akureyri", "Starts at 11pm and ends at 1am"),
+                new Tour(3, "Blue Lagoon","Spend a day in the blue lagoon", 35000, LocalDate.of(2024, 3, 20), "Reykjavik", "We meet at the Blue lagoon parking lot at 10am, time in the lagoon is around 3 hours and then we eat lunch in the restuarnt at 13:30 pm"),
+                new Tour(4, "Volcano Hike","Volcano hike in the south", 9000, LocalDate.of(2024, 3, 12), "Vik", "Meet in Víkurskáli at 8am, hike takes around 4 hours")
         );
+
 
         filteredTours = new FilteredList<>(tours, p -> true);
         tourList.setItems(filteredTours);
@@ -56,23 +57,26 @@ public class ToursController {
         }
     }
 
-    private void getDescription(Tour tour){
+    private void getTourInformation(Tour tour){
         descriptionTitle.setText(tour.getTourName());
         dateLabel.setText(tour.getDate().toString().formatted("%d/%m/%Y"));
         descriptionText.setText(tour.getDescription());
+        scheduleText.setText(tour.getSchedule());
         if (infoPane.isVisible()) {
             return;
         }
         infoPane.setVisible(true);
     }
 
+
     public void onClickedTour(){
         Tour selectedTour = tourList.getSelectionModel().getSelectedItem();
         if(selectedTour == null){
             return;
         }
-        getDescription(selectedTour);
+        getTourInformation(selectedTour);
     }
+
 
     private void applyFilters() {
         String searchText = searchBar.getText().toLowerCase();

@@ -9,19 +9,19 @@ public class Tour {
         private final int price;
         private final LocalDate date;
         private final String city;
-        //private final String schedule;
+        private final String schedule;
         //private final String availability;
         //private final String review;
 
 
-        public Tour(int tourId, String tourName, String description, int price, LocalDate date, String city) {
+        public Tour(int tourId, String tourName, String description, int price, LocalDate date, String city, String schedule) {
             this.tourId = tourId;
             this.tourName = tourName;
             this.description = description;
             this.price = price;
             this.date = date;
             this.city = city;
-            //this.schedule = schedule;
+            this.schedule = schedule;
             //this.availability = availability;
             //this.review = review;
         }
@@ -50,11 +50,12 @@ public class Tour {
             return price;
         }
 
-        /*
-        private String getSchedule(){
+
+        public String getSchedule(){
             return schedule;
         }
 
+        /*
         private String getAvailability(){
             return availability;
         }

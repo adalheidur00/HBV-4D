@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb9a4957-c39d-4883-8c00-040e22e92b34" name="Changes" comment="Filter">
+    <list default="true" id="bb9a4957-c39d-4883-8c00-040e22e92b34" name="Changes" comment="Description">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/WishlistController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/wishlist-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/IndexController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/Tour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/Tour.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/ToursController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/ToursController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/index-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/index-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/tours-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/tours-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -111,6 +114,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Allskonar" />
     <MESSAGE value="Filter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Filter" />
+    <MESSAGE value="Description" />
+    <option name="LAST_COMMIT_MESSAGE" value="Description" />
   </component>
 </project>
