@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS Users (
     phoneNumber TEXT NOT NULL,
 );
 
-INSERT INTO Users (name, email, phone_nr, isGuide) VALUES ('Alla', 'alla@hi.is', '1234567')
+INSERT INTO Users (name, email, phoneNumber) VALUES ('Alla', 'alla@hi.is', '1234567')

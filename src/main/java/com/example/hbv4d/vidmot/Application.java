@@ -16,12 +16,16 @@ public class Application extends javafx.application.Application {
         switchScene(INDEX_PATH);
     }
 
+
+
     public static void switchScene(String fxmlFile) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource(fxmlFile));
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
+
+
 
     public static void main(String[] args) {
         launch();

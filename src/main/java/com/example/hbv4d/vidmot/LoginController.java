@@ -1,5 +1,6 @@
 package com.example.hbv4d.vidmot;
 
+import com.example.hbv4d.DataBase.UserDB;
 import com.example.hbv4d.vinnsla.User;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -19,14 +20,15 @@ public class LoginController {
     @FXML
     public void onLogin() throws IOException {
         String username = fxUsernameInput.getText();
-        User.setLoggedIn(username);
-
-        if(username == null){
+        User loginUser = UserDB.getUser(username);
+        if(loginUser == null){
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Login failed");
-            alert.setHeaderText("Username input empty");
+            alert.setHeaderText("User not found");
             alert.show();
         }
+
+        User.setLoggedIn(username);
         Application.switchScene(INDEX_PATH);
     }
 
