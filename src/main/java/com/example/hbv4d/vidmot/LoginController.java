@@ -1,5 +1,6 @@
-package com.example.hbv4d;
+package com.example.hbv4d.vidmot;
 
+import com.example.hbv4d.vinnsla.User;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
@@ -7,6 +8,8 @@ import javafx.scene.control.TextField;
 import java.io.IOException;
 
 public class LoginController {
+    private static final String INDEX_PATH = "/com/example/hbv4d/index-view.fxml";
+
     @FXML
     public TextField fxUsernameInput;
 
@@ -24,12 +27,12 @@ public class LoginController {
             alert.setHeaderText("Username input empty");
             alert.show();
         }
-        Application.switchScene("index-view.fxml");
+        Application.switchScene(INDEX_PATH);
     }
 
     @FXML
     public void onBack() throws Exception {
-        Application.switchScene("index-view.fxml");
+        Application.switchScene(INDEX_PATH);
     }
 
 }

@@ -4,13 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb9a4957-c39d-4883-8c00-040e22e92b34" name="Changes" comment="Wishlist">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/BookingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/booking-view.fxml" afterDir="false" />
+    <list default="true" id="bb9a4957-c39d-4883-8c00-040e22e92b34" name="Changes" comment="Booking confirmation">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vinnsla/Wishlist.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/ToursController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/ToursController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/WishlistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/WishlistController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vidmot/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vidmot/BookingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vidmot/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vidmot/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/Tour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vinnsla/Tour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/ToursController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vidmot/ToursController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vinnsla/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/WishlistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vidmot/WishlistController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/booking-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/booking-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/index-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/index-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/login-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/login-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/tours-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/tours-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/wishlist-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/wishlist-view.fxml" afterDir="false" />
@@ -26,8 +34,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -117,6 +125,7 @@
     <MESSAGE value="Filter" />
     <MESSAGE value="Description" />
     <MESSAGE value="Wishlist" />
-    <option name="LAST_COMMIT_MESSAGE" value="Wishlist" />
+    <MESSAGE value="Booking confirmation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Booking confirmation" />
   </component>
 </project>

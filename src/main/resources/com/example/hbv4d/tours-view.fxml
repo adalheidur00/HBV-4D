@@ -16,7 +16,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hbv4d.ToursController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hbv4d.vidmot.ToursController">
     <children>
         <AnchorPane prefHeight="405.0" prefWidth="366.0">
             <children>
@@ -68,8 +68,8 @@
                             </font></Text>
                     </children>
                 </TextFlow>
-                <Button onAction="#onBookTour" layoutX="205.0" layoutY="370.0" mnemonicParsing="false" text="Book tour" />
-                <Button layoutX="275.0" layoutY="370.0" mnemonicParsing="false" text="View booked tours" />
+                <Button fx:id="fxBookingButton" onAction="#onBookTour" layoutX="205.0" layoutY="370.0" mnemonicParsing="false" text="Book tour" />
+                <Button fx:id="fxViewBookingButton" layoutX="275.0" layoutY="370.0" mnemonicParsing="false" text="View booked tours" />
             <Label fx:id="fxLoggedIn" alignment="CENTER" contentDisplay="CENTER" layoutX="3.0" layoutY="372.0" prefHeight="22.0" prefWidth="97.0" style="-fx-border-color: black;" text="User" />
             <Label layoutY="44.0" prefHeight="17.0" prefWidth="109.0" text="Description">
                <font>
@@ -112,7 +112,7 @@
                         <Label fx:id="availabilityLabel" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                     </children>
                 </GridPane>
-            <Button layoutX="109.0" layoutY="370.0" mnemonicParsing="false" text="Add to wishlist" />
+            <Button onAction="#onAddToWishlist" fx:id="fxWishlistButton" layoutX="109.0" layoutY="370.0" mnemonicParsing="false" text="Add to wishlist" />
             </children></AnchorPane>
     </children>
 </AnchorPane>

@@ -1,10 +1,14 @@
-package com.example.hbv4d;
+package com.example.hbv4d.vidmot;
 
+import com.example.hbv4d.vinnsla.User;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 public class IndexController {
+    private static final String WISHLIST_PATH = "/com/example/hbv4d/wishlist-view.fxml";
+    private static final String TOURS_PATH = "/com/example/hbv4d/tours-view.fxml";
+    private static final String LOGIN_PATH = "/com/example/hbv4d/login-view.fxml";
     @FXML
     public Label fxLoggedIn;
 
@@ -27,17 +31,17 @@ public class IndexController {
      */
     @FXML
     public void onBrowseTours() throws Exception{
-        Application.switchScene("tours-view.fxml");
+        Application.switchScene(TOURS_PATH);
     }
 
     @FXML
     public void onLogin() throws Exception{
-        Application.switchScene("login-view.fxml");
+        Application.switchScene(LOGIN_PATH);
     }
 
     @FXML
     public void onWishList() throws Exception{
-        Application.switchScene("wishlist-view.fxml");
+        Application.switchScene(WISHLIST_PATH);
     }
 
 }

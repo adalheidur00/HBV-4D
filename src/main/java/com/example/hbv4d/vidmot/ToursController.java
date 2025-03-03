@@ -1,5 +1,7 @@
-package com.example.hbv4d;
+package com.example.hbv4d.vidmot;
 
+import com.example.hbv4d.vinnsla.Tour;
+import com.example.hbv4d.vinnsla.User;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -11,13 +13,20 @@ import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import com.example.hbv4d.vinnsla.Wishlist;
 
 import java.io.IOException;
 import java.time.LocalDate;
 
 public class ToursController {
+
+    private static final String INDEX_PATH = "/com/example/hbv4d/index-view.fxml";
+    private static final String BOOKING_PATH = "/com/example/hbv4d/booking-view.fxml";
+
     public Label fxLoggedIn;
     public TextField searchBar;
+
+
     public ListView<Tour> tourList = new ListView<>();
     @FXML
     private ComboBox<String> priceFilter;
@@ -26,16 +35,21 @@ public class ToursController {
     @FXML
     private DatePicker dateFilter;
 
-
     public AnchorPane infoPane;
     public Text descriptionText;
     public Text scheduleText;
     public Label descriptionTitle;
     public Label dateLabel;
 
+    @FXML
+    private Button fxWishlistButton;
+    @FXML
+    private Button fxBookingButton;
+    @FXML
+    private Button fxViewBookingButton;
+
     private final ObservableList<Tour> tours = FXCollections.observableArrayList();
     private FilteredList<Tour> filteredTours;
-
 
     @FXML
     public void initialize(){
@@ -59,6 +73,13 @@ public class ToursController {
         String user = User.getLoggedIn();
         if (user != null) {
             fxLoggedIn.setText("User: " + user);
+            fxBookingButton.setDisable(false);
+            fxViewBookingButton.setDisable(false);
+            fxWishlistButton.setDisable(false);
+        } else {
+            fxBookingButton.setDisable(true);
+            fxViewBookingButton.setDisable(true);
+            fxWishlistButton.setDisable(true);
         }
     }
     private void getTourInformation(Tour tour){
@@ -74,10 +95,9 @@ public class ToursController {
 
     public void switchScene(Tour tour) throws IOException {
         Stage stage = (Stage) searchBar.getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("booking-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(BOOKING_PATH));
 
         Parent root =  fxmlLoader.load();
-
         Scene scene = new Scene(root);
 
         BookingController controller = fxmlLoader.getController();
@@ -107,6 +127,20 @@ public class ToursController {
             return;
         }
         getTourInformation(selectedTour);
+    }
+
+    public void onAddToWishlist() {
+        Tour selectedTour = tourList.getSelectionModel().getSelectedItem();
+        if (selectedTour != null) {
+            Wishlist.addTour(selectedTour);
+        }
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Added to Wishlist");
+        alert.setHeaderText("Tour Added Successfully!");
+        assert selectedTour != null;
+        alert.setContentText(selectedTour.getTourName() + " has been added to your wishlist.");
+        alert.showAndWait();
+
     }
 
 
@@ -151,14 +185,13 @@ public class ToursController {
                     return false;
                 }
             }
-
             return true;
         });
     }
 
     @FXML
     public void onBack() throws Exception {
-        Application.switchScene("index-view.fxml");
+        Application.switchScene(INDEX_PATH);
     }
 
 

@@ -1,5 +1,6 @@
-package com.example.hbv4d;
+package com.example.hbv4d.vidmot;
 
+import com.example.hbv4d.vinnsla.Tour;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -7,6 +8,7 @@ import javafx.scene.control.Label;
 import java.io.IOException;
 
 public class BookingController {
+    private static final String TOURS_PATH = "/com/example/hbv4d/tours-view.fxml";
     public Label tourNameLabel;
     public Label tourDateLabel;
     public Label tourDescriptionLabel;
@@ -33,7 +35,7 @@ public class BookingController {
         alert.show();
         alert.setOnCloseRequest(dialogEvent -> {
             try {
-                Application.switchScene("tours-view.fxml");
+                Application.switchScene(TOURS_PATH);
                 alert.close();
             } catch (IOException e) {
                 throw new RuntimeException(e);
@@ -43,7 +45,7 @@ public class BookingController {
 
     public void onBack() {
         try {
-           Application.switchScene("tours-view.fxml");
+           Application.switchScene(TOURS_PATH);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

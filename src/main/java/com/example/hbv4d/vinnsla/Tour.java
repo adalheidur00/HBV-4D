@@ -1,4 +1,4 @@
-package com.example.hbv4d;
+package com.example.hbv4d.vinnsla;
 
 import java.time.LocalDate;
 
@@ -66,8 +66,9 @@ public class Tour {
         */
 
 
-    @Override
-    public String toString() {
-        return tourName + " - " + price + "kr - " + city + " - " + date;
-    }
+
+        @Override
+        public String toString() {
+            return tourName + " - " + price + "kr - " + city + " - " + date;
+        }
 }
