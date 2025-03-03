@@ -1,4 +1,4 @@
-package com.example.hbv4d.DataBase;
+package com.example.hbv4d.utils;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

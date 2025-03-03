@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb9a4957-c39d-4883-8c00-040e22e92b34" name="Changes" comment="added Wishlist">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/DataBase/Database.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/DataBase/UserDB.java" afterDir="false" />
+    <list default="true" id="bb9a4957-c39d-4883-8c00-040e22e92b34" name="Changes" comment="Reyna að gera DB">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vinnsla/Review.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/DataBase/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/utils/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/DataBase/UserDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vinnsla/UserDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vidmot/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vidmot/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vidmot/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vidmot/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vinnsla/Tour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vinnsla/Tour.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/db/hbv4d.db" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/db/hbv4d.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/db/hbv4d.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +28,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -87,6 +89,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.hbv4d.DataBase" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/com/example/hbv4d" />
       <recent name="$PROJECT_DIR$/src/main/java/com/example/hbv4d" />
@@ -119,6 +124,7 @@
     <MESSAGE value="Wishlist" />
     <MESSAGE value="Booking confirmation" />
     <MESSAGE value="added Wishlist" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Wishlist" />
+    <MESSAGE value="Reyna að gera DB" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reyna að gera DB" />
   </component>
 </project>

@@ -1,6 +1,8 @@
 package com.example.hbv4d.vinnsla;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Tour {
         private final int tourId;
@@ -11,7 +13,9 @@ public class Tour {
         private final String city;
         private final String schedule;
         //private final String availability;
-        //private final String review;
+        private final List<Review> reviews;
+
+
 
 
         public Tour(int tourId, String tourName, String description, int price, LocalDate date, String city, String schedule) {
@@ -23,7 +27,7 @@ public class Tour {
             this.city = city;
             this.schedule = schedule;
             //this.availability = availability;
-            //this.review = review;
+            this.reviews = new ArrayList<>();
         }
 
         private int getId(){
@@ -59,11 +63,15 @@ public class Tour {
         private String getAvailability(){
             return availability;
         }
-
-        private String listReviews(){
-            return review;
-        }
         */
+
+        public void addReview(Review review) {
+            reviews.add(review);
+        }
+
+        public List<Review> getReviews() {
+            return reviews;
+        }
 
 
 

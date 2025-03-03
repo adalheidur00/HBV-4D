@@ -20,9 +20,9 @@
     <children>
         <AnchorPane prefHeight="405.0" prefWidth="366.0">
             <children>
-                <Button layoutX="161.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="37.0" text="Search" />
-                <ListView fx:id="tourList" layoutX="5.0" layoutY="31.0" onMouseClicked="#onClickedTour" prefHeight="334.0" prefWidth="348.0" />
-                <TextField fx:id="searchBar" layoutX="5.0" layoutY="2.0" prefHeight="25.0" prefWidth="158.0" promptText="Search tours" />
+                <Button layoutX="283.0" layoutY="2.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="70.0" text="Search" />
+                <ListView fx:id="tourList" layoutX="5.0" layoutY="31.0" onMouseClicked="#onClickedTour" prefHeight="171.0" prefWidth="348.0" />
+                <TextField fx:id="searchBar" layoutX="125.0" layoutY="2.0" prefHeight="25.0" prefWidth="158.0" promptText="Search tours" />
                 <ComboBox fx:id="priceFilter" layoutX="5.0" layoutY="30.0" prefHeight="26.0" prefWidth="116.0" promptText="Price">
                     <items>
                         <FXCollections fx:factory="observableArrayList">
@@ -45,7 +45,8 @@
                     </items>
                 </ComboBox>
                 <DatePicker fx:id="dateFilter" layoutX="237.0" layoutY="30.0" prefHeight="26.0" prefWidth="116.0" />
-            <Button onAction="#onBack" layoutX="14.0" layoutY="371.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="70.0" text="Go back" />
+            <Button layoutX="5.0" layoutY="2.0" mnemonicParsing="false" onAction="#onBack" prefHeight="26.0" prefWidth="70.0" text="Go back" />
+            <ListView layoutX="5.0" layoutY="220.0" prefHeight="171.0" prefWidth="348.0" />
 
             </children>
         </AnchorPane>
@@ -68,7 +69,7 @@
                             </font></Text>
                     </children>
                 </TextFlow>
-                <Button fx:id="fxBookingButton" onAction="#onBookTour" layoutX="205.0" layoutY="370.0" mnemonicParsing="false" text="Book tour" />
+                <Button fx:id="fxBookingButton" layoutX="205.0" layoutY="370.0" mnemonicParsing="false" onAction="#onBookTour" text="Book tour" />
                 <Button fx:id="fxViewBookingButton" layoutX="275.0" layoutY="370.0" mnemonicParsing="false" text="View booked tours" />
             <Label fx:id="fxLoggedIn" alignment="CENTER" contentDisplay="CENTER" layoutX="3.0" layoutY="372.0" prefHeight="22.0" prefWidth="97.0" style="-fx-border-color: black;" text="User" />
             <Label layoutY="44.0" prefHeight="17.0" prefWidth="109.0" text="Description">
@@ -112,7 +113,7 @@
                         <Label fx:id="availabilityLabel" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                     </children>
                 </GridPane>
-            <Button onAction="#onAddToWishlist" fx:id="fxWishlistButton" layoutX="109.0" layoutY="370.0" mnemonicParsing="false" text="Add to wishlist" />
+            <Button fx:id="fxWishlistButton" layoutX="109.0" layoutY="370.0" mnemonicParsing="false" onAction="#onAddToWishlist" text="Add to wishlist" />
             </children></AnchorPane>
     </children>
 </AnchorPane>
