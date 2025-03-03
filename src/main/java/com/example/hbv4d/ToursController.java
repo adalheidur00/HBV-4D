@@ -4,10 +4,15 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.time.LocalDate;
 
 public class ToursController {
@@ -56,7 +61,6 @@ public class ToursController {
             fxLoggedIn.setText("User: " + user);
         }
     }
-
     private void getTourInformation(Tour tour){
         descriptionTitle.setText(tour.getTourName());
         dateLabel.setText(tour.getDate().toString().formatted("%d/%m/%Y"));
@@ -68,6 +72,34 @@ public class ToursController {
         infoPane.setVisible(true);
     }
 
+    public void switchScene(Tour tour) throws IOException {
+        Stage stage = (Stage) searchBar.getScene().getWindow();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("booking-view.fxml"));
+
+        Parent root =  fxmlLoader.load();
+
+        Scene scene = new Scene(root);
+
+        BookingController controller = fxmlLoader.getController();
+        controller.setTour(tour);
+        controller.updateUserInterface();
+
+        stage.setScene(scene);
+        stage.setTitle("Booking");
+        stage.show();
+    }
+
+    public void onBookTour() {
+        Tour selectedTour = tourList.getSelectionModel().getSelectedItem();
+        if (selectedTour == null) {
+            return;
+        }
+        try {
+            switchScene(selectedTour);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     public void onClickedTour(){
         Tour selectedTour = tourList.getSelectionModel().getSelectedItem();
@@ -123,4 +155,11 @@ public class ToursController {
             return true;
         });
     }
+
+    @FXML
+    public void onBack() throws Exception {
+        Application.switchScene("index-view.fxml");
+    }
+
+
 }

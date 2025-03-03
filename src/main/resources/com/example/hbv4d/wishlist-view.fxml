@@ -14,7 +14,7 @@
         <ListView  layoutX="50.0" layoutY="60.0" prefHeight="250.0" prefWidth="500.0" />
         <Button layoutX="200.0" layoutY="330.0" prefWidth="200.0" text="Remove from Wishlist"  />
 
-        <Button layoutX="20.0" layoutY="360.0" prefWidth="80.0" text="Back"  />
+        <Button layoutX="20.0" layoutY="360.0" prefWidth="80.0" text="Back" onAction="#onBack"  />
     </children>
 </AnchorPane>
 

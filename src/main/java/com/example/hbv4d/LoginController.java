@@ -27,4 +27,9 @@ public class LoginController {
         Application.switchScene("index-view.fxml");
     }
 
+    @FXML
+    public void onBack() throws Exception {
+        Application.switchScene("index-view.fxml");
+    }
+
 }

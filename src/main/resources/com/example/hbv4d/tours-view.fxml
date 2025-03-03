@@ -20,8 +20,8 @@
     <children>
         <AnchorPane prefHeight="405.0" prefWidth="366.0">
             <children>
-                <Button layoutX="161.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="37.0" text="🔎" />
-                <ListView fx:id="tourList" layoutX="5.0" layoutY="31.0" onMouseClicked="#onClickedTour" prefHeight="360.0" prefWidth="348.0" />
+                <Button layoutX="161.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="37.0" text="Search" />
+                <ListView fx:id="tourList" layoutX="5.0" layoutY="31.0" onMouseClicked="#onClickedTour" prefHeight="334.0" prefWidth="348.0" />
                 <TextField fx:id="searchBar" layoutX="5.0" layoutY="2.0" prefHeight="25.0" prefWidth="158.0" promptText="Search tours" />
                 <ComboBox fx:id="priceFilter" layoutX="5.0" layoutY="30.0" prefHeight="26.0" prefWidth="116.0" promptText="Price">
                     <items>
@@ -45,6 +45,7 @@
                     </items>
                 </ComboBox>
                 <DatePicker fx:id="dateFilter" layoutX="237.0" layoutY="30.0" prefHeight="26.0" prefWidth="116.0" />
+            <Button onAction="#onBack" layoutX="14.0" layoutY="371.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="70.0" text="Go back" />
 
             </children>
         </AnchorPane>
@@ -67,7 +68,7 @@
                             </font></Text>
                     </children>
                 </TextFlow>
-                <Button layoutX="205.0" layoutY="370.0" mnemonicParsing="false" text="Book tour" />
+                <Button onAction="#onBookTour" layoutX="205.0" layoutY="370.0" mnemonicParsing="false" text="Book tour" />
                 <Button layoutX="275.0" layoutY="370.0" mnemonicParsing="false" text="View booked tours" />
             <Label fx:id="fxLoggedIn" alignment="CENTER" contentDisplay="CENTER" layoutX="3.0" layoutY="372.0" prefHeight="22.0" prefWidth="97.0" style="-fx-border-color: black;" text="User" />
             <Label layoutY="44.0" prefHeight="17.0" prefWidth="109.0" text="Description">
