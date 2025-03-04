@@ -19,6 +19,9 @@ public class Application extends javafx.application.Application {
         dbConn();
     }
 
+    /**
+     * Connects the application to a Database
+     */
     public void dbConn() {
         try {
             Class.forName("org.sqlite.JDBC");
@@ -29,6 +32,10 @@ public class Application extends javafx.application.Application {
         }
     }
 
+    /**
+     * Helper function to switch scenes in tour booking application
+     * @param fxmlFile fxml file for different views
+     */
     public static void switchScene(String fxmlFile) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource(fxmlFile));
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);

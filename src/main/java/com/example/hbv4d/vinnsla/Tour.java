@@ -30,7 +30,7 @@ public class Tour {
             this.reviews = new ArrayList<>();
         }
 
-        private int getId(){
+        public int getId(){
             return tourId;
         }
 

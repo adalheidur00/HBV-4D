@@ -1,9 +1,7 @@
 package com.example.hbv4d.vidmot;
 
-import com.example.hbv4d.vinnsla.Tour;
-import com.example.hbv4d.vinnsla.TourDAO;
-import com.example.hbv4d.vinnsla.User;
-import com.example.hbv4d.vinnsla.Wishlist;
+import com.example.hbv4d.utils.InfoDialog;
+import com.example.hbv4d.vinnsla.*;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.fxml.FXML;
@@ -17,7 +15,13 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.List;
 
+/**
+ * Controller for browsing tours.
+ * User can browser tours and see tour reviews
+ * Logged-in user can browse tours, add tours to wishlist, see reviews and book a tour.
+ */
 public class ToursController {
 
     private static final String INDEX_PATH = "/com/example/hbv4d/index-view.fxml";
@@ -46,31 +50,24 @@ public class ToursController {
     @FXML
     private Button fxBookingButton;
     @FXML
-    private Button fxViewBookingButton;
+    private Button fxSeeReviewsButton;
 
-    //private final ObservableList<Tour> tours = FXCollections.observableArrayList();
     private FilteredList<Tour> filteredTours;
 
+    /**
+     * Initializes the controller
+     * Adds tours from Database to and ObservableList
+     * Adds tours from the ObservableList to a filtered list for filtering
+     * Enables buttons for logged-in User
+     */
     @FXML
     public void initialize(){
-        // Mock data
-        /*
-        tours.addAll(
-                new Tour(1, "Golden Circle", "Visit the golden circle in one day!", 12000, LocalDate.of(2024, 3, 10),"Reykjavik", "We leave at 8am and are back at pickup place around 8pm"),
-                new Tour(2, "Northern Lights", "See the northern lights in the north", 8000, LocalDate.of(2024, 3, 15),"Akureyri", "Starts at 11pm and ends at 1am"),
-                new Tour(3, "Blue Lagoon","Spend a day in the blue lagoon", 35000, LocalDate.of(2024, 3, 20), "Reykjavik", "We meet at the Blue lagoon parking lot at 10am, time in the lagoon is around 3 hours and then we eat lunch in the restuarnt at 13:30 pm"),
-                new Tour(4, "Volcano Hike","Volcano hike in the south", 9000, LocalDate.of(2024, 3, 12), "Vik", "Meet in Víkurskáli at 8am, hike takes around 4 hours")
-        );
-
-         */
-
         ObservableList<Tour> tours = TourDAO.listTours();
         if (tours != null) {
             for (Tour tour : tours) {
                 tourList.getItems().add(tour);
             }
         }
-
 
         filteredTours = new FilteredList<>(tours, p -> true);
         tourList.setItems(filteredTours);
@@ -84,14 +81,17 @@ public class ToursController {
         if (user != null) {
             fxLoggedIn.setText("User: " + user);
             fxBookingButton.setDisable(false);
-            fxViewBookingButton.setDisable(false);
             fxWishlistButton.setDisable(false);
         } else {
             fxBookingButton.setDisable(true);
-            fxViewBookingButton.setDisable(true);
             fxWishlistButton.setDisable(true);
         }
     }
+
+    /**
+     * Helper function for getting all information for a selected tour
+     * @param tour Selected tour from the ObservableList
+     */
     private void getTourInformation(Tour tour){
         descriptionTitle.setText(tour.getTourName());
         dateLabel.setText(tour.getDate().toString().formatted("%d/%m/%Y"));
@@ -103,6 +103,10 @@ public class ToursController {
         infoPane.setVisible(true);
     }
 
+    /**
+     * Helper function to switch scenes to booking scene
+     * @param tour Selected tour from ObservableList
+     */
     public void switchScene(Tour tour) throws IOException {
         Stage stage = (Stage) searchBar.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(BOOKING_PATH));
@@ -119,6 +123,9 @@ public class ToursController {
         stage.show();
     }
 
+    /**
+     * Switches scenes to booking scene if a tour is selected and Book button is pressed
+     */
     public void onBookTour() {
         Tour selectedTour = tourList.getSelectionModel().getSelectedItem();
         if (selectedTour == null) {
@@ -131,6 +138,9 @@ public class ToursController {
         }
     }
 
+    /**
+     * Gets all information for selected tour
+     */
     public void onClickedTour(){
         Tour selectedTour = tourList.getSelectionModel().getSelectedItem();
         if(selectedTour == null){
@@ -139,21 +149,53 @@ public class ToursController {
         getTourInformation(selectedTour);
     }
 
+    /**
+     *  See reviews for selected tour
+     */
+    public void onSeeReviews() {
+        Tour selectedTour = tourList.getSelectionModel().getSelectedItem();
+        if (selectedTour == null) {
+            return;
+        }
+
+        List<Review> reviews = ReviewDAO.getReviewsForTour(selectedTour.getId());
+
+        InfoDialog alert = new InfoDialog("Tour Reviews","Reviews for " + selectedTour.getTourName());
+
+        if (reviews.isEmpty()) {
+            alert.setContentText("No reviews available for this tour.");
+        } else {
+            StringBuilder reviewText = new StringBuilder();
+            for (Review review : reviews) {
+                reviewText.append("Rating ").append(review.getRating()).append("/5 - ")
+                        .append(review.getFirstName()).append("\n")
+                        .append("\"").append(review.getComment()).append("\"\n\n");
+            }
+            alert.setContentText(reviewText.toString());
+        }
+
+        alert.showAndWait();
+    }
+
+    /**
+     * Adds selected tour to wishlist
+     */
     public void onAddToWishlist() {
         Tour selectedTour = tourList.getSelectionModel().getSelectedItem();
         if (selectedTour != null) {
             Wishlist.addTour(selectedTour);
         }
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Added to Wishlist");
-        alert.setHeaderText("Tour Added Successfully!");
+
         assert selectedTour != null;
+        InfoDialog alert = new InfoDialog("Added to Wishlist","Tour Added Successfully!");
         alert.setContentText(selectedTour.getTourName() + " has been added to your wishlist.");
         alert.showAndWait();
-
     }
 
 
+    /**
+     * Applies filters
+     */
     private void applyFilters() {
         String searchText = searchBar.getText().toLowerCase();
         String selectedPrice = priceFilter.getValue();
@@ -203,6 +245,5 @@ public class ToursController {
     public void onBack() throws Exception {
         Application.switchScene(INDEX_PATH);
     }
-
 
 }

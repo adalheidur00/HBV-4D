@@ -20,7 +20,7 @@ public class TourDAO {
                 LocalDate.parse(rs.getString("date")),
                 rs.getString("city"),
                 rs.getString("schedule"),
-                rs.getInt("availabilty"));
+                rs.getInt("availability"));
 
         List<Review> reviews = getReviewsForTour(rs.getInt("id"), conn);
         for (Review review : reviews) {

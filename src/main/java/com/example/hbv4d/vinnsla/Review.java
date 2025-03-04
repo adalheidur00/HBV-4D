@@ -1,5 +1,6 @@
 package com.example.hbv4d.vinnsla;
 
+
 public class Review {
     private final String firstName;
     private final String comment;

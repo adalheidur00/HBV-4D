@@ -1,13 +1,16 @@
 package com.example.hbv4d.vidmot;
 
-import com.example.hbv4d.vinnsla.UserDAO;
+import com.example.hbv4d.utils.InfoDialog;
 import com.example.hbv4d.vinnsla.User;
+import com.example.hbv4d.vinnsla.UserDAO;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
 
+/**
+ * Controller for logging a user in
+ */
 public class LoginController {
     private static final String INDEX_PATH = "/com/example/hbv4d/index-view.fxml";
 
@@ -17,14 +20,16 @@ public class LoginController {
     @FXML
     public TextField fxPasswordInput;
 
+    /**
+     * Logs a user in
+     * Goes back to index scene when user is logged in
+     */
     @FXML
     public void onLogin() throws IOException {
         String username = fxUsernameInput.getText();
         User loginUser = UserDAO.getUser(username);
         if(loginUser == null){
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Login failed");
-            alert.setHeaderText("User not found");
+            InfoDialog alert = new InfoDialog("Login failed","User not found");
             alert.show();
         }
 
@@ -32,6 +37,9 @@ public class LoginController {
         Application.switchScene(INDEX_PATH);
     }
 
+    /**
+     * Go back to index scene
+     */
     @FXML
     public void onBack() throws Exception {
         Application.switchScene(INDEX_PATH);

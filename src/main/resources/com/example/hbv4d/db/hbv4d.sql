@@ -31,9 +31,9 @@ INSERT INTO Users (name, email, phoneNumber) VALUES ('Alla', 'alla@hi.is', '1234
 
 INSERT INTO Tours (id, tourName, description, price, date, city, schedule, availability)
 VALUES
-(1, 'Scenic Mountain Hike', 'A beautiful hike through the mountains.', 500, '2025-05-20', 'Reykjavik', '10:00 AM', 20),
-(2, 'Northern Lights Tour', 'Experience the magic of the Aurora Borealis.', 800, '2025-12-15', 'Akureyri', '9:00 PM', 10),
-(3, 'Golden Circle Tour', 'See geysers, waterfalls, and historic sites.', 950, '2025-07-10', 'Thingvellir', '8:00 AM', 30);
+(1, 'Scenic Mountain Hike', 'A beautiful hike through the mountains.', 9000, '2025-05-20', 'Reykjavik', '10:00 AM', 20),
+(2, 'Northern Lights Tour', 'Experience the magic of the Aurora Borealis.', 18000, '2025-12-15', 'Akureyri', '9:00 PM', 10),
+(3, 'Golden Circle Tour', 'See geysers, waterfalls, and historic sites.', 35000, '2025-07-10', 'Thingvellir', '8:00 AM', 30);
 
 INSERT INTO Reviews (id, userId, firstName, tourId, rating, comment)
 VALUES

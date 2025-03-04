@@ -70,7 +70,7 @@
                     </children>
                 </TextFlow>
                 <Button fx:id="fxBookingButton" layoutX="205.0" layoutY="370.0" mnemonicParsing="false" onAction="#onBookTour" text="Book tour" />
-                <Button fx:id="fxViewBookingButton" layoutX="275.0" layoutY="370.0" mnemonicParsing="false" text="View booked tours" />
+                <Button fx:id="fxSeeReviewsButton"  onAction="#onSeeReviews" layoutX="275.0" layoutY="370.0" mnemonicParsing="false" text="See reviews" />
             <Label fx:id="fxLoggedIn" alignment="CENTER" contentDisplay="CENTER" layoutX="3.0" layoutY="372.0" prefHeight="22.0" prefWidth="97.0" style="-fx-border-color: black;" text="User" />
             <Label layoutY="44.0" prefHeight="17.0" prefWidth="109.0" text="Description">
                <font>
