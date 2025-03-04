@@ -5,13 +5,9 @@ import com.example.hbv4d.vinnsla.*;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -104,26 +100,6 @@ public class ToursController {
     }
 
     /**
-     * Helper function to switch scenes to booking scene
-     * @param tour Selected tour from ObservableList
-     */
-    public void switchScene(Tour tour) throws IOException {
-        Stage stage = (Stage) searchBar.getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(BOOKING_PATH));
-
-        Parent root =  fxmlLoader.load();
-        Scene scene = new Scene(root);
-
-        BookingController controller = fxmlLoader.getController();
-        controller.setTour(tour);
-        controller.updateUserInterface();
-
-        stage.setScene(scene);
-        stage.setTitle("Booking");
-        stage.show();
-    }
-
-    /**
      * Switches scenes to booking scene if a tour is selected and Book button is pressed
      */
     public void onBookTour() {
@@ -132,7 +108,7 @@ public class ToursController {
             return;
         }
         try {
-            switchScene(selectedTour);
+            Application.bookingScene(BOOKING_PATH, selectedTour);
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -1,6 +1,8 @@
 package com.example.hbv4d.vidmot;
 
+import com.example.hbv4d.vinnsla.Tour;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -43,6 +45,24 @@ public class Application extends javafx.application.Application {
         primaryStage.show();
     }
 
+    /**
+     * Helper function to switch to booking scene with tour information
+     * @param bookingViewFile fxml file for booking view
+     * @param tour tour to book
+     */
+    public static void bookingScene(String bookingViewFile, Tour tour) throws IOException{
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource(bookingViewFile));
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+
+        BookingController controller = fxmlLoader.getController();
+
+        controller.setTour(tour);
+        controller.updateUserInterface();
+
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
     public static void main(String[] args) {
         launch();
     }
