@@ -1,8 +1,9 @@
 package com.example.hbv4d.vidmot;
 
 import com.example.hbv4d.vinnsla.Tour;
+import com.example.hbv4d.vinnsla.TourDAO;
 import com.example.hbv4d.vinnsla.User;
-import javafx.collections.FXCollections;
+import com.example.hbv4d.vinnsla.Wishlist;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.fxml.FXML;
@@ -13,7 +14,6 @@ import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import com.example.hbv4d.vinnsla.Wishlist;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -48,18 +48,28 @@ public class ToursController {
     @FXML
     private Button fxViewBookingButton;
 
-    private final ObservableList<Tour> tours = FXCollections.observableArrayList();
+    //private final ObservableList<Tour> tours = FXCollections.observableArrayList();
     private FilteredList<Tour> filteredTours;
 
     @FXML
     public void initialize(){
         // Mock data
+        /*
         tours.addAll(
                 new Tour(1, "Golden Circle", "Visit the golden circle in one day!", 12000, LocalDate.of(2024, 3, 10),"Reykjavik", "We leave at 8am and are back at pickup place around 8pm"),
                 new Tour(2, "Northern Lights", "See the northern lights in the north", 8000, LocalDate.of(2024, 3, 15),"Akureyri", "Starts at 11pm and ends at 1am"),
                 new Tour(3, "Blue Lagoon","Spend a day in the blue lagoon", 35000, LocalDate.of(2024, 3, 20), "Reykjavik", "We meet at the Blue lagoon parking lot at 10am, time in the lagoon is around 3 hours and then we eat lunch in the restuarnt at 13:30 pm"),
                 new Tour(4, "Volcano Hike","Volcano hike in the south", 9000, LocalDate.of(2024, 3, 12), "Vik", "Meet in Víkurskáli at 8am, hike takes around 4 hours")
         );
+
+         */
+
+        ObservableList<Tour> tours = TourDAO.listTours();
+        if (tours != null) {
+            for (Tour tour : tours) {
+                tourList.getItems().add(tour);
+            }
+        }
 
 
         filteredTours = new FilteredList<>(tours, p -> true);

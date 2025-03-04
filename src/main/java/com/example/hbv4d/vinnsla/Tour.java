@@ -12,13 +12,13 @@ public class Tour {
         private final LocalDate date;
         private final String city;
         private final String schedule;
-        //private final String availability;
+        private final int availability;
         private final List<Review> reviews;
 
 
 
 
-        public Tour(int tourId, String tourName, String description, int price, LocalDate date, String city, String schedule) {
+        public Tour(int tourId, String tourName, String description, int price, LocalDate date, String city,String schedule,int availability) {
             this.tourId = tourId;
             this.tourName = tourName;
             this.description = description;
@@ -26,7 +26,7 @@ public class Tour {
             this.date = date;
             this.city = city;
             this.schedule = schedule;
-            //this.availability = availability;
+            this.availability = availability;
             this.reviews = new ArrayList<>();
         }
 
@@ -59,11 +59,10 @@ public class Tour {
             return schedule;
         }
 
-        /*
-        private String getAvailability(){
+        private int getAvailability(){
             return availability;
         }
-        */
+
 
         public void addReview(Review review) {
             reviews.add(review);

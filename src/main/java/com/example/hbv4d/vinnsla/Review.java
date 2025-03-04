@@ -1,22 +1,22 @@
 package com.example.hbv4d.vinnsla;
 
 public class Review {
-    private final String reviewerName;
-    private final String reviewContent;
+    private final String firstName;
+    private final String comment;
     private final int rating;
 
-    public Review(String reviewerName, String reviewContent, int rating) {
-        this.reviewerName = reviewerName;
-        this.reviewContent = reviewContent;
+    public Review(String firstName, String comment, int rating) {
+        this.firstName = firstName;
+        this.comment = comment;
         this.rating = rating;
     }
 
-    public String getReviewerName() {
-        return reviewerName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public String getReviewContent() {
-        return reviewContent;
+    public String getComment() {
+        return comment;
     }
 
     public int getRating() {
@@ -25,6 +25,6 @@ public class Review {
 
     @Override
     public String toString() {
-        return "Review by " + reviewerName + ": " + reviewContent + " (Rating: " + rating + ")";
+        return "Review by " + firstName + ": " + comment + " (Rating: " + rating + ")";
     }
 }
