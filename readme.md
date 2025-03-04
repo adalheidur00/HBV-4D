@@ -50,14 +50,14 @@ at java.base/java.lang.Thread.run(Thread.java:1583)
 Caused by: java.lang.IllegalStateException: Location is not set.
 at javafx.fxml@21/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2556)
 at javafx.fxml@21/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2531)
-at com.example.hbv4d@1.0-SNAPSHOT/com.example.hbv4d.Application.start(Application.java:12)
+at com.example.hbv4d@1.0-SNAPSHOT/com.example.hbv4d.vidmot.Application.start(Application.java:12)
 at javafx.graphics@21/com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:839)
 at javafx.graphics@21/com.sun.javafx.application.PlatformImpl.lambda$runAndWait$12(PlatformImpl.java:483)
 at javafx.graphics@21/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:456)
 at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
 at javafx.graphics@21/com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:455)
 at javafx.graphics@21/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
-Exception running application com.example.hbv4d.Application
+Exception running application com.example.hbv4d.vidmot.Application
 
 - keyra mvn clean package í terminal 
 - keyra aftur

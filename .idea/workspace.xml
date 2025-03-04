@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb9a4957-c39d-4883-8c00-040e22e92b34" name="Changes" comment="" />
+    <list default="true" id="bb9a4957-c39d-4883-8c00-040e22e92b34" name="Changes" comment="byrjuð að bæta við reviews">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/utils/CancelDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/utils/InfoDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vinnsla/ReviewDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vidmot/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vidmot/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vidmot/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vidmot/BookingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vidmot/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vidmot/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vidmot/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vidmot/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vidmot/ToursController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vidmot/ToursController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vidmot/WishlistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vidmot/WishlistController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vinnsla/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vinnsla/Review.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vinnsla/Tour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vinnsla/Tour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vinnsla/TourDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vinnsla/TourDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/booking-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/booking-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/db/hbv4d.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/db/hbv4d.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/db/hbv4d.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/db/hbv4d.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/tours-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/tours-view.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +35,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -26,7 +45,7 @@
     <toolWindowToFront>false</toolWindowToFront>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../Skóli/V25/HBV401/HBV-4D" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -68,14 +87,23 @@
     "Application.IndexApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/adalheidur/Desktop/Skóli/V25/HBV401/HBV-4D",
+    "git-widget-placeholder": "Database",
+    "last_opened_file_path": "/Users/adalheidur/Desktop/HVD-4D/src/main/resources/com/example/hbv4d",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "promo.database"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.hbv4d.DataBase" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/com/example/hbv4d" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/example/hbv4d" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-ea" />
@@ -96,4 +124,15 @@
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Allskonar" />
+    <MESSAGE value="Filter" />
+    <MESSAGE value="Description" />
+    <MESSAGE value="Wishlist" />
+    <MESSAGE value="Booking confirmation" />
+    <MESSAGE value="added Wishlist" />
+    <MESSAGE value="Reyna að gera DB" />
+    <MESSAGE value="byrjuð að bæta við reviews" />
+    <option name="LAST_COMMIT_MESSAGE" value="byrjuð að bæta við reviews" />
+  </component>
 </project>
