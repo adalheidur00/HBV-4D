@@ -1,32 +1,3 @@
-CREATE TABLE IF NOT EXISTS Users (
-    id INTEGER PRIMARY KEY,
-    name TEXT NOT NULL,
-    email TEXT NOT NULL,
-    phoneNumber TEXT NOT NULL,
-);
-
-CREATE TABLE IF NOT EXISTS Tours (
-    id INTEGER PRIMARY KEY,
-    tourName TEXT ,
-    description TEXT ,
-    price INT,
-    date TEXT,
-    city TEXT,
-    schedule TEXT,
-    availability int,
-    reviewId INTEGER REFERENCES Reviews(id) ON DELETE CASCADE
-);
-
-CREATE TABLE IF NOT EXISTS Reviews (
-    id INTEGER PRIMARY KEY,
-    userId INTEGER REFERENCES Users(id) ON DELETE CASCADE,
-    firstName TEXT REFERENCES Users(name) ON DELETE CASCADE,
-    tourId INT REFERENCES Tours(id) ON DELETE CASCADE,
-    rating INTEGER,
-    comment TEXT
-);
-
-
 INSERT INTO Users (name, email, phoneNumber) VALUES ('Alla', 'alla@hi.is', '1234567')
 
 INSERT INTO Tours (id, tourName, description, price, date, city, schedule, availability)

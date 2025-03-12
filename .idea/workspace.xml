@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb9a4957-c39d-4883-8c00-040e22e92b34" name="Changes" comment="InfoDialog og CancelDialog">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vidmot/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vidmot/Application.java" afterDir="false" />
+    <list default="true" id="bb9a4957-c39d-4883-8c00-040e22e92b34" name="Changes" comment="Booking database">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vidmot/ToursController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vidmot/ToursController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,12 +37,12 @@
     &quot;assignee&quot;: &quot;adalheidur00&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/adalheidur00/HVD-4D.git&quot;,
-    &quot;accountId&quot;: &quot;37f4ad38-82d7-41a6-ac46-764d7b3c3f3e&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/adalheidur00/HBV-4D.git",
+    "accountId": "37f4ad38-82d7-41a6-ac46-764d7b3c3f3e"
   }
-}</component>
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -72,8 +71,8 @@
     "Application.IndexApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Database",
-    "last_opened_file_path": "/Users/adalheidur/Desktop/HVD-4D/src/main/resources/com/example/hbv4d",
+    "git-widget-placeholder": "bookingdb",
+    "last_opened_file_path": "/Users/adalheidur/Desktop/HBV1/HBV-4D",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -119,6 +118,7 @@
     <MESSAGE value="Reyna að gera DB" />
     <MESSAGE value="byrjuð að bæta við reviews" />
     <MESSAGE value="InfoDialog og CancelDialog" />
-    <option name="LAST_COMMIT_MESSAGE" value="InfoDialog og CancelDialog" />
+    <MESSAGE value="Booking database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Booking database" />
   </component>
 </project>

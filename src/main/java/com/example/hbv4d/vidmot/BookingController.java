@@ -1,7 +1,9 @@
 package com.example.hbv4d.vidmot;
 
 import com.example.hbv4d.utils.CancelDialog;
+import com.example.hbv4d.vinnsla.BookingDAO;
 import com.example.hbv4d.vinnsla.Tour;
+import com.example.hbv4d.vinnsla.User;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
@@ -26,6 +28,9 @@ public class BookingController {
         this.tour = tour;
     }
 
+    public User user = User.getLoggedIn();
+
+
     /**
      * Initializes the UI for booking a selected tour
      */
@@ -41,6 +46,7 @@ public class BookingController {
      * Confirms booking
      */
     public void confirm() {
+        BookingDAO.addBooking(tour.getId(), user.getId(), user.getName(), user.getEmail());
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Booking confirmation");
         alert.setHeaderText("Booking successful");

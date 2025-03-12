@@ -10,7 +10,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 
 import java.io.IOException;
-import java.time.LocalDate;
 import java.util.List;
 
 /**
@@ -65,17 +64,9 @@ public class ToursController {
             }
         }
 
-        filteredTours = new FilteredList<>(tours, p -> true);
-        tourList.setItems(filteredTours);
-
-        searchBar.textProperty().addListener((obs, oldValue, newValue) -> applyFilters());
-        priceFilter.valueProperty().addListener((obs, oldValue, newValue) -> applyFilters());
-        cityFilter.valueProperty().addListener((obs, oldValue, newValue) -> applyFilters());
-        dateFilter.valueProperty().addListener((obs, oldValue, newValue) -> applyFilters());
-
-        String user = User.getLoggedIn();
+        User user = User.getLoggedIn();
         if (user != null) {
-            fxLoggedIn.setText("User: " + user);
+            fxLoggedIn.setText("User: " + user.getName());
             fxBookingButton.setDisable(false);
             fxWishlistButton.setDisable(false);
         } else {
@@ -173,48 +164,7 @@ public class ToursController {
      * Applies filters
      */
     private void applyFilters() {
-        String searchText = searchBar.getText().toLowerCase();
-        String selectedPrice = priceFilter.getValue();
-        String selectedCity = cityFilter.getValue();
-        LocalDate selectedDate = dateFilter.getValue();
 
-        filteredTours.setPredicate(tour -> {
-            if (!searchText.isEmpty()) {
-                if (!tour.getTourName().toLowerCase().contains(searchText)) {
-                    return false;
-                }
-            }
-
-            if (selectedPrice != null) {
-                switch (selectedPrice) {
-                    case "Under 10,000kr":
-                        if (tour.getPrice() >= 10000) return false;
-                        break;
-                    case "Under 20,000kr":
-                        if (tour.getPrice() >= 20000) return false;
-                        break;
-                    case "Under 30,000kr":
-                        if (tour.getPrice() >= 30000) return false;
-                        break;
-                    case "Under 40,000kr":
-                        if (tour.getPrice() >= 40000) return false;
-                        break;
-                }
-            }
-
-            if (selectedCity != null && !selectedCity.equals("All Cities")) {
-                if (!tour.getCity().equalsIgnoreCase(selectedCity)) {
-                    return false;
-                }
-            }
-
-            if (selectedDate != null) {
-                if (!tour.getDate().equals(selectedDate)) {
-                    return false;
-                }
-            }
-            return true;
-        });
     }
 
     @FXML

@@ -6,7 +6,7 @@ public class User {
     private final String email;
     private final String phoneNumber;
 
-    private static String loggedIn;
+    private static User loggedIn;
 
 
     public User(int id, String name, String email, String phoneNumber) {
@@ -32,11 +32,11 @@ public class User {
         return phoneNumber;
     }
 
-    public static void setLoggedIn(String name){
-        loggedIn = name;
+    public static void setLoggedIn(User user){
+        loggedIn = user ;
     }
 
-    public static String getLoggedIn(){
+    public static User getLoggedIn(){
         return loggedIn;
     }
 

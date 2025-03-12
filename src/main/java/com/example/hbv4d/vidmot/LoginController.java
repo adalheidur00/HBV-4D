@@ -27,13 +27,13 @@ public class LoginController {
     @FXML
     public void onLogin() throws IOException {
         String username = fxUsernameInput.getText();
-        User loginUser = UserDAO.getUser(username);
-        if(loginUser == null){
+        User user = UserDAO.getUser(username);
+        if(user == null){
             InfoDialog alert = new InfoDialog("Login failed","User not found");
             alert.show();
         }
 
-        User.setLoggedIn(username);
+        User.setLoggedIn(user);
         Application.switchScene(INDEX_PATH);
     }
 

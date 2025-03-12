@@ -25,9 +25,9 @@ public class IndexController {
      */
     @FXML
     public void initialize(){
-        String user = User.getLoggedIn();
+        User user = User.getLoggedIn();
         if (user != null) {
-            fxLoggedIn.setText("User: " + user);
+            fxLoggedIn.setText("User: " + user.getName());
             fxWishlistButton.setDisable(false);
         } else {
             fxWishlistButton.setDisable(true);
