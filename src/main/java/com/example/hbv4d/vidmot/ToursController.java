@@ -73,9 +73,9 @@ public class ToursController {
         cityFilter.valueProperty().addListener((obs, oldValue, newValue) -> applyFilters());
         dateFilter.valueProperty().addListener((obs, oldValue, newValue) -> applyFilters());
 
-        String user = User.getLoggedIn();
+        User user = User.getLoggedIn();
         if (user != null) {
-            fxLoggedIn.setText("User: " + user);
+            fxLoggedIn.setText("User: " + user.getName());
             fxBookingButton.setDisable(false);
             fxWishlistButton.setDisable(false);
         } else {
