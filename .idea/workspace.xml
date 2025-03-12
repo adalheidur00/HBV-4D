@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb9a4957-c39d-4883-8c00-040e22e92b34" name="Changes" comment="InfoDialog og CancelDialog">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vinnsla/Booking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vinnsla/BookingDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vidmot/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vidmot/BookingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vidmot/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vidmot/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vidmot/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vidmot/LoginController.java" afterDir="false" />
+    <list default="true" id="bb9a4957-c39d-4883-8c00-040e22e92b34" name="Changes" comment="Booking database">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vidmot/ToursController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vidmot/ToursController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vinnsla/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/vinnsla/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/db/hbv4d.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/db/hbv4d.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/db/hbv4d.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/hbv4d/db/hbv4d.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,6 +118,7 @@
     <MESSAGE value="Reyna að gera DB" />
     <MESSAGE value="byrjuð að bæta við reviews" />
     <MESSAGE value="InfoDialog og CancelDialog" />
-    <option name="LAST_COMMIT_MESSAGE" value="InfoDialog og CancelDialog" />
+    <MESSAGE value="Booking database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Booking database" />
   </component>
 </project>
