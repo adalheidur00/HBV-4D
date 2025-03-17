@@ -79,7 +79,7 @@ public class ToursController {
      * Helper function for getting all information for a selected tour
      * @param tour Selected tour from the ObservableList
      */
-    private void getTourInformation(Tour tour){
+    void getTourInformation(Tour tour){
         descriptionTitle.setText(tour.getTourName());
         dateLabel.setText(tour.getDate().toString().formatted("%d/%m/%Y"));
         descriptionText.setText(tour.getDescription());
