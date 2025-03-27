@@ -10,7 +10,7 @@ import javafx.scene.control.ListView;
  */
 public class WishlistController {
 
-    private static final String INDEX_PATH = "/com/example/hbv4d/index-view.fxml";
+    private static final String INDEX_PATH = "/com/example/hbv4d/logged-view.fxml";
 
     @FXML
     private ListView<Tour> wishlistListView;

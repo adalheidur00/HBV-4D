@@ -12,13 +12,32 @@ import java.util.logging.Logger;
 
 public class Application extends javafx.application.Application {
     private static Stage primaryStage;
-    private static final String INDEX_PATH = "/com/example/hbv4d/index-view.fxml";
+    private static final String HOMEPAGE_PATH = "/com/example/hbv4d/homepage1-view.fxml";
+    private static final String LOGGED_PATH = "/com/example/hbv4d/logged-view.fxml";
+
+    private static boolean loggedIn = false; //prufa að tracka
 
     @Override
     public void start(Stage stage) throws IOException {
         primaryStage = stage;
-        switchScene(INDEX_PATH);
+        switchScene(HOMEPAGE_PATH);
         dbConn();
+    }
+
+    public static void setLoggedIn(boolean status) {
+        loggedIn = status;
+    } // prufa
+
+    public static boolean isLoggedIn() {
+        return loggedIn;
+    }
+
+    public static void goBackToHp() throws IOException {
+        if (loggedIn) {
+            switchScene(LOGGED_PATH);
+        } else {
+            switchScene(HOMEPAGE_PATH);
+        }
     }
 
     /**

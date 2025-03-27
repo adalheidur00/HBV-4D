@@ -19,7 +19,7 @@ import java.util.List;
  */
 public class ToursController {
 
-    private static final String INDEX_PATH = "/com/example/hbv4d/index-view.fxml";
+    private static final String INDEX_PATH = "/com/example/hbv4d/logged-view.fxml";
     private static final String BOOKING_PATH = "/com/example/hbv4d/booking-view.fxml";
 
     public Label fxLoggedIn;

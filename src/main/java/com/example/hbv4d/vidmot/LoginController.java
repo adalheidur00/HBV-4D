@@ -12,37 +12,41 @@ import java.io.IOException;
  * Controller for logging a user in
  */
 public class LoginController {
-    private static final String INDEX_PATH = "/com/example/hbv4d/index-view.fxml";
+    private static final String HOMEPAGE_PATH = "/com/example/hbv4d/homepage1-view.fxml";
+    private static final String LOGGED_PATH = "/com/example/hbv4d/logged-view.fxml";
 
     @FXML
     public TextField fxUsernameInput;
 
-    @FXML
-    public TextField fxPasswordInput;
-
     /**
      * Logs a user in
-     * Goes back to index scene when user is logged in
+     * Goes back to homepage scene when user is logged in
      */
     @FXML
     public void onLogin() throws IOException {
+
         String username = fxUsernameInput.getText();
+
         User user = UserDAO.getUser(username);
-        if(user == null){
-            InfoDialog alert = new InfoDialog("Login failed","User not found");
+
+        if (user == null) {
+            InfoDialog alert = new InfoDialog("Login failed", "User not found");
             alert.show();
+            return;
         }
 
         User.setLoggedIn(user);
-        Application.switchScene(INDEX_PATH);
+        Application.setLoggedIn(true);
+        Application.switchScene(LOGGED_PATH);
     }
 
+
     /**
-     * Go back to index scene
+     * Go back to homepage scene
      */
     @FXML
     public void onBack() throws Exception {
-        Application.switchScene(INDEX_PATH);
+        Application.switchScene(HOMEPAGE_PATH);
     }
 
 }
