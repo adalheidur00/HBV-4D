@@ -13,8 +13,7 @@ CREATE TABLE IF NOT EXISTS Tours (
     date TEXT,
     city TEXT,
     schedule TEXT,
-    availability int,
-    reviewId INTEGER REFERENCES Reviews(id) ON DELETE CASCADE
+    availability int
 );
 
 CREATE TABLE IF NOT EXISTS Reviews (
