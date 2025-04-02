@@ -6,8 +6,8 @@ module com.example.hbv4d {
     requires org.xerial.sqlitejdbc;
 
 
-    opens com.example.hbv4d.vidmot to javafx.fxml;
-    exports com.example.hbv4d.vidmot;
-    exports com.example.hbv4d.vinnsla;
-    opens com.example.hbv4d.vinnsla to javafx.fxml;
+    opens com.example.hbv4d.ui to javafx.fxml;
+    exports com.example.hbv4d.ui;
+    exports com.example.hbv4d.objects;
+    opens com.example.hbv4d.objects to javafx.fxml;
 }

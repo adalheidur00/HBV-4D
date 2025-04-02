@@ -1,7 +1,7 @@
-package com.example.hbv4d.vidmot;
+package com.example.hbv4d.ui;
 
-import com.example.hbv4d.vinnsla.Tour;
-import com.example.hbv4d.vinnsla.Wishlist;
+import com.example.hbv4d.objects.Tour;
+import com.example.hbv4d.objects.Wishlist;
 import javafx.collections.FXCollections;
 import javafx.scene.control.ListView;
 import org.junit.jupiter.api.BeforeEach;

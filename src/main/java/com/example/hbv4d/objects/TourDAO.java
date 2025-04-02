@@ -1,4 +1,4 @@
-package com.example.hbv4d.vinnsla;
+package com.example.hbv4d.objects;
 
 import com.example.hbv4d.utils.Database;
 import javafx.collections.ObservableList;

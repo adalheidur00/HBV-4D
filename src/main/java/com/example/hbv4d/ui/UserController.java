@@ -1,8 +1,8 @@
-package com.example.hbv4d.vidmot;
+package com.example.hbv4d.ui;
 
 import com.example.hbv4d.utils.InfoDialog;
-import com.example.hbv4d.vinnsla.User;
-import com.example.hbv4d.vinnsla.UserDAO;
+import com.example.hbv4d.objects.User;
+import com.example.hbv4d.objects.UserDAO;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 

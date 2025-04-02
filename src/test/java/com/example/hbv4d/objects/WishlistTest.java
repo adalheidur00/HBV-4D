@@ -1,4 +1,4 @@
-package com.example.hbv4d.vinnsla;
+package com.example.hbv4d.objects;
 
 import javafx.collections.ObservableList;
 import org.junit.jupiter.api.BeforeEach;

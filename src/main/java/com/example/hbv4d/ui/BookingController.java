@@ -1,9 +1,9 @@
-package com.example.hbv4d.vidmot;
+package com.example.hbv4d.ui;
 
 import com.example.hbv4d.utils.CancelDialog;
-import com.example.hbv4d.vinnsla.BookingDAO;
-import com.example.hbv4d.vinnsla.Tour;
-import com.example.hbv4d.vinnsla.User;
+import com.example.hbv4d.objects.BookingDAO;
+import com.example.hbv4d.objects.Tour;
+import com.example.hbv4d.objects.User;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;

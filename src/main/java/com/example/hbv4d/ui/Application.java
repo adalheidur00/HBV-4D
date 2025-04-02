@@ -1,6 +1,6 @@
-package com.example.hbv4d.vidmot;
+package com.example.hbv4d.ui;
 
-import com.example.hbv4d.vinnsla.Tour;
+import com.example.hbv4d.objects.Tour;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;

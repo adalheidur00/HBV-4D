@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="BookingPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hbv4d.vidmot.BookingController">
+<AnchorPane fx:id="BookingPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hbv4d.ui.BookingController">
     <children>
         <GridPane layoutX="14.0" layoutY="60.0" prefHeight="193.0" prefWidth="298.0">
             <columnConstraints>

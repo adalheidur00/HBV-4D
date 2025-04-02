@@ -1,4 +1,4 @@
-package com.example.hbv4d.vinnsla;
+package com.example.hbv4d.objects;
 
 public class User {
     private final int id;

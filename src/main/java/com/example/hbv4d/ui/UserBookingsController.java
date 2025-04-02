@@ -1,9 +1,9 @@
-package com.example.hbv4d.vidmot;
+package com.example.hbv4d.ui;
 
-import com.example.hbv4d.vinnsla.Booking;
-import com.example.hbv4d.vinnsla.BookingDAO;
-import com.example.hbv4d.vinnsla.Tour;
-import com.example.hbv4d.vinnsla.User;
+import com.example.hbv4d.objects.Booking;
+import com.example.hbv4d.objects.BookingDAO;
+import com.example.hbv4d.objects.Tour;
+import com.example.hbv4d.objects.User;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;

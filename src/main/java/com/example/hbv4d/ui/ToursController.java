@@ -1,7 +1,7 @@
-package com.example.hbv4d.vidmot;
+package com.example.hbv4d.ui;
 
 import com.example.hbv4d.utils.InfoDialog;
-import com.example.hbv4d.vinnsla.*;
+import com.example.hbv4d.objects.*;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;

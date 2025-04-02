@@ -1,4 +1,4 @@
-package com.example.hbv4d.vinnsla;
+package com.example.hbv4d.objects;
 
 import com.example.hbv4d.utils.Database;
 
@@ -26,7 +26,7 @@ public class BookingDAO {
 
     public static ArrayList<Booking> listBookingsForUser(int userId) {
         try (Connection conn = Database.connect()) {
-            String sql = "SELECT * FROM"  + BookingTable + "WHERE userId = ?";
+            String sql = "SELECT * FROM "  + BookingTable + " WHERE userId = ?";
 
             PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setInt(1, userId);
@@ -46,7 +46,7 @@ public class BookingDAO {
 
     public static Tour getTourForBooking(int tourId){
         try (Connection conn = Database.connect()) {
-            String sql = "SELECT * FROM"  + ToursTable + "WHERE id = ?";
+            String sql = "SELECT * FROM "  + ToursTable + " WHERE id = ?";
             PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setInt(1, tourId);
             ResultSet rs = pstmt.executeQuery();
@@ -64,7 +64,7 @@ public class BookingDAO {
 
     public static void addBooking(int tourId, int userId, String firstName, String email) {
         try (Connection conn = Database.connect()) {
-            String sql = "INSERT INTO"  + BookingTable + "(tourId, userId, firstName, email ) VALUES (?,  ?, ?, ?)";
+            String sql = "INSERT INTO "  + BookingTable + " (tourId, userId, firstName, email ) VALUES (?,  ?, ?, ?)";
             PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setInt(1, tourId);
             pstmt.setInt(2, userId);
@@ -79,7 +79,7 @@ public class BookingDAO {
 
     public static void deleteBooking(int tourId){
         try (Connection conn = Database.connect()){
-            String sql = "DELETE FROM" + BookingTable + "WHERE tourId = ?";
+            String sql = "DELETE FROM " + BookingTable + " WHERE tourId = ?";
             PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setInt(1, tourId);
             pstmt.executeUpdate();

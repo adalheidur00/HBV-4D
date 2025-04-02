@@ -1,4 +1,4 @@
-package com.example.hbv4d.vinnsla;
+package com.example.hbv4d.objects;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
