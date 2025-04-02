@@ -17,18 +17,19 @@ import java.util.Optional;
  */
 public class BookingController {
     private static final String TOURS_PATH = "/com/example/hbv4d/tours-view.fxml";
+
     public Label tourNameLabel;
     public Label tourDateLabel;
     public Label tourDescriptionLabel;
     public ComboBox monthSelect;
     public ComboBox yearSelect;
     private Tour tour;
+    public User user = User.getLoggedIn();
+
 
     public void setTour(Tour tour) {
         this.tour = tour;
     }
-
-    public User user = User.getLoggedIn();
 
 
     /**
@@ -45,16 +46,17 @@ public class BookingController {
     /**
      * Confirms booking
      */
-    public void confirm() {
+    public void confirm() throws IOException {
         BookingDAO.addBooking(tour.getId(), user.getId(), user.getName(), user.getEmail());
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Booking confirmation");
         alert.setHeaderText("Booking successful");
         alert.showAndWait();
+        Application.switchScene(TOURS_PATH);
     }
 
     /**
-     * Cancels booking
+     * Cancels a booking
      */
     public void cancel() throws IOException {
         CancelDialog alert = new CancelDialog("Cancel Booking", "Are you sure you want to cancel?",

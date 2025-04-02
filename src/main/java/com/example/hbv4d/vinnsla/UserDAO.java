@@ -24,11 +24,13 @@ public class UserDAO  {
             PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, username);
             ResultSet rs = pstmt.executeQuery();
+
             if (rs.next()) {
                 return resultMapper(rs);
             } else {
                 return null;
             }
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

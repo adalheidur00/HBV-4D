@@ -9,16 +9,19 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * Data Access Object for Reviews
+ */
 public class ReviewDAO {
-    public static List<Review> getReviewsForTour(int tourId) {
-        List<Review> reviews = new ArrayList<>();
-        String sql = "SELECT * FROM Reviews WHERE tourId = ?";
+    private static final String TableName = "Reviews";
 
-        try (Connection conn = Database.connect();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+    public static List<Review> getReviewsForTour(int tourId) {
+        try (Connection conn = Database.connect()) {
+            String sql = "SELECT * FROM " + TableName + " WHERE tourId = ?";
+            PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setInt(1, tourId);
             ResultSet rs = pstmt.executeQuery();
+            List<Review> reviews = new ArrayList<>();
 
             while (rs.next()) {
                 reviews.add(new Review(
@@ -27,10 +30,12 @@ public class ReviewDAO {
                         rs.getInt("rating")
                 ));
             }
+            return reviews;
+
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
 
-        return reviews;
+        return null;
     }
 }

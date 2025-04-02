@@ -16,8 +16,6 @@ public class Tour {
         private final List<Review> reviews;
 
 
-
-
         public Tour(int tourId, String tourName, String description, int price, LocalDate date, String city,String schedule,int availability) {
             this.tourId = tourId;
             this.tourName = tourName;
@@ -71,8 +69,6 @@ public class Tour {
         public List<Review> getReviews() {
             return reviews;
         }
-
-
 
         @Override
         public String toString() {

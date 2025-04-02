@@ -12,10 +12,9 @@ import java.util.logging.Logger;
 
 public class Application extends javafx.application.Application {
     private static Stage primaryStage;
-    private static final String HOMEPAGE_PATH = "/com/example/hbv4d/homepage1-view.fxml";
-    private static final String LOGGED_PATH = "/com/example/hbv4d/logged-view.fxml";
+    private static final String HOMEPAGE_PATH = "/com/example/hbv4d/HP-view.fxml";
 
-    private static boolean loggedIn = false; //prufa að tracka
+    private static boolean loggedIn = false;
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -26,19 +25,8 @@ public class Application extends javafx.application.Application {
 
     public static void setLoggedIn(boolean status) {
         loggedIn = status;
-    } // prufa
-
-    public static boolean isLoggedIn() {
-        return loggedIn;
     }
 
-    public static void goBackToHp() throws IOException {
-        if (loggedIn) {
-            switchScene(LOGGED_PATH);
-        } else {
-            switchScene(HOMEPAGE_PATH);
-        }
-    }
 
     /**
      * Connects the application to a Database
