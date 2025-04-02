@@ -11,9 +11,9 @@ import java.io.IOException;
 /**
  * Controller for logging a user in
  */
-public class LoginController {
-    private static final String HOMEPAGE_PATH = "/com/example/hbv4d/homepage1-view.fxml";
-    private static final String LOGGED_PATH = "/com/example/hbv4d/logged-view.fxml";
+public class UserController {
+    private static final String HOMEPAGE_PATH = "/com/example/hbv4d/HP-view.fxml";
+    private static final String LOGGED_PATH = "/com/example/hbv4d/HPLogged-view.fxml";
 
     @FXML
     public TextField fxUsernameInput;
@@ -24,9 +24,7 @@ public class LoginController {
      */
     @FXML
     public void onLogin() throws IOException {
-
         String username = fxUsernameInput.getText();
-
         User user = UserDAO.getUser(username);
 
         if (user == null) {
@@ -40,9 +38,8 @@ public class LoginController {
         Application.switchScene(LOGGED_PATH);
     }
 
-
     /**
-     * Go back to homepage scene
+     * Switches scenes back to the homepage
      */
     @FXML
     public void onBack() throws Exception {

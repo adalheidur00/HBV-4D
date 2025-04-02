@@ -5,9 +5,7 @@ public class User {
     private final String name;
     private final String email;
     private final String phoneNumber;
-
     private static User loggedIn;
-
 
     public User(int id, String name, String email, String phoneNumber) {
         this.id = id;

@@ -10,11 +10,10 @@ import javafx.scene.control.ListView;
  */
 public class WishlistController {
 
-    private static final String INDEX_PATH = "/com/example/hbv4d/logged-view.fxml";
+    private static final String HOMEPAGE_PATH = "/com/example/hbv4d/HPLogged-view.fxml";
 
     @FXML
-    private ListView<Tour> wishlistListView;
-
+    public ListView<Tour> wishlistListView;
 
     /**
      * initializes the wishlist with items added to wishlist in Tour Controller
@@ -36,10 +35,10 @@ public class WishlistController {
     }
 
     /**
-     * Go back to index view
+     * Switches scenes back to homepage
      */
     @FXML
     public void onBack() throws Exception {
-        Application.switchScene(INDEX_PATH);
+        Application.switchScene(HOMEPAGE_PATH);
     }
 }

@@ -3,7 +3,6 @@ package com.example.hbv4d.vidmot;
 import com.example.hbv4d.utils.InfoDialog;
 import com.example.hbv4d.vinnsla.*;
 import javafx.collections.ObservableList;
-import javafx.collections.transformation.FilteredList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
@@ -19,35 +18,26 @@ import java.util.List;
  */
 public class ToursController {
 
-    private static final String INDEX_PATH = "/com/example/hbv4d/logged-view.fxml";
+    private static final String LOGGED_PATH = "/com/example/hbv4d/HPLogged-view.fxml";
+    private static final String UNLOGGED_PATH = "/com/example/hbv4d/HP-view.fxml";
     private static final String BOOKING_PATH = "/com/example/hbv4d/booking-view.fxml";
 
     public Label fxLoggedIn;
     public TextField searchBar;
-
-
-    public ListView<Tour> tourList = new ListView<>();
-    @FXML
-    private ComboBox<String> priceFilter;
-    @FXML
-    private ComboBox<String> cityFilter;
-    @FXML
-    private DatePicker dateFilter;
-
     public AnchorPane infoPane;
     public Text descriptionText;
     public Text scheduleText;
     public Label descriptionTitle;
     public Label dateLabel;
+    public User user;
+    public ListView<Tour> tourList = new ListView<>();
 
     @FXML
     private Button fxWishlistButton;
     @FXML
     private Button fxBookingButton;
     @FXML
-    private Button fxSeeReviewsButton;
-
-    private FilteredList<Tour> filteredTours;
+    private ComboBox<String> priceFilter;
 
     /**
      * Initializes the controller
@@ -64,7 +54,7 @@ public class ToursController {
             }
         }
 
-        User user = User.getLoggedIn();
+        user = User.getLoggedIn();
         if (user != null) {
             fxLoggedIn.setText("User: " + user.getName());
             fxBookingButton.setDisable(false);
@@ -73,6 +63,12 @@ public class ToursController {
             fxBookingButton.setDisable(true);
             fxWishlistButton.setDisable(true);
         }
+
+        searchBar.setOnKeyPressed(e -> {
+            if(e.getCode().toString().equals("ENTER")){
+                onSearch();
+            }
+        });
     }
 
     /**
@@ -126,7 +122,6 @@ public class ToursController {
         }
 
         List<Review> reviews = ReviewDAO.getReviewsForTour(selectedTour.getId());
-
         InfoDialog alert = new InfoDialog("Tour Reviews","Reviews for " + selectedTour.getTourName());
 
         if (reviews.isEmpty()) {
@@ -159,17 +154,45 @@ public class ToursController {
         alert.showAndWait();
     }
 
+    /**
+     * Search for a specific tour, city or date
+     */
+    public void onSearch(){
+        String search = searchBar.getText();
+        ObservableList<Tour> tours = TourDAO.getToursByFilter(search);
+        System.out.println(tours);
+        if(tours != null){
+            tourList.getItems().setAll(tours);
+        }
+
+    }
+
+    /**
+     * Switches scenes back to the homepage
+     */
+    @FXML
+    public void onBack() throws Exception {
+        user = User.getLoggedIn();
+        if (user != null) {
+            Application.switchScene(LOGGED_PATH);
+        } else {
+            Application.switchScene(UNLOGGED_PATH);
+        }
+
+    }
 
     /**
      * Applies filters
      */
-    private void applyFilters() {
-
-    }
-
     @FXML
-    public void onBack() throws Exception {
-        Application.switchScene(INDEX_PATH);
+    public void applyFilters() {
+        String value = priceFilter.getValue();
+        String intValue = value.split("kr")[0].trim();
+        int price = Integer.parseInt(intValue.replaceAll("\\.",""));
+        ObservableList<Tour> filteredTours = TourDAO.listToursByPrice(price);
+        if (filteredTours != null) {
+            tourList.getItems().setAll(filteredTours);
+        }
     }
 
 }
