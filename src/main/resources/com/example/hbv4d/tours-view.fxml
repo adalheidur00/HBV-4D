@@ -19,10 +19,10 @@
     <children>
         <AnchorPane prefHeight="405.0" prefWidth="366.0">
             <children>
-                <Button onAction="#onSearch" layoutX="294.0" layoutY="2.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="59.0" text="Search" />
-                <ListView fx:id="tourList" layoutX="5.0" layoutY="38.0" onMouseClicked="#onClickedTour" prefHeight="164.0" prefWidth="348.0" />
+                <Button layoutX="294.0" layoutY="2.0" mnemonicParsing="false" onAction="#onSearch" prefHeight="26.0" prefWidth="59.0" text="Search" />
+                <ListView fx:id="tourList" layoutX="5.0" layoutY="38.0" onMouseClicked="#onClickedTour" prefHeight="357.0" prefWidth="348.0" />
                 <TextField fx:id="searchBar" layoutX="151.0" layoutY="2.0" prefHeight="26.0" prefWidth="144.0" promptText="Search tours" />
-                <ComboBox fx:id="priceFilter" onAction="#applyFilters" layoutX="75.0" layoutY="2.0" prefHeight="26.0" prefWidth="76.0" promptText="Price">
+                <ComboBox fx:id="priceFilter" layoutX="75.0" layoutY="2.0" onAction="#applyFilters" prefHeight="26.0" prefWidth="76.0" promptText="Price">
                     <items>
                         <FXCollections fx:factory="observableArrayList">
                             <String fx:value="Any" />
@@ -34,7 +34,6 @@
                     </items>
                 </ComboBox>
             <Button layoutX="5.0" layoutY="2.0" mnemonicParsing="false" onAction="#onBack" prefHeight="26.0" prefWidth="70.0" text="Go back" />
-            <ListView layoutX="5.0" layoutY="220.0" prefHeight="171.0" prefWidth="348.0" />
 
             </children>
         </AnchorPane>
