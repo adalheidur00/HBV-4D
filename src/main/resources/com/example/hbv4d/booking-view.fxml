@@ -66,12 +66,15 @@
                         <Font name="System Bold" size="12.0" />
                     </font>
                 </Label>
-                  <Button layoutX="21.0" layoutY="235.0" mnemonicParsing="false" onAction="#confirm" text="Confirm Booking" />
-            <Button contentDisplay="RIGHT" layoutX="130.0" layoutY="235.0" mnemonicParsing="false" onAction="#cancel" text="Cancel Booking" />
+                <Button layoutX="17.0" layoutY="234.0" mnemonicParsing="false" onAction="#confirm" style="-fx-background-color: #34A853; -fx-border-radius: 5; -fx-border-color: #000000; -fx-background-radius: 4;" text="Confirm Booking">
+                    <font>
+                        <Font size="12.0" />
+                    </font></Button>
+            <Button contentDisplay="RIGHT" layoutX="130.0" layoutY="235.0" mnemonicParsing="false" onAction="#cancel" text="Cancel Booking" style="-fx-background-color: #E57373; -fx-background-radius: 4; -fx-border-color: #000000; -fx-border-radius: 5;" />
             </children></AnchorPane>
         <Label layoutX="267.0" layoutY="18.0" text="Checkout">
             <font>
-                <Font name="System Bold" size="15.0" />
+                <Font name="System Bold" size="16.0" />
             </font>
         </Label>
     </children>

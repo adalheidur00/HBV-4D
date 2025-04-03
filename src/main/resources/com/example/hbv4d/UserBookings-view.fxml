@@ -15,7 +15,7 @@
    <children>
       <VBox alignment="CENTER" prefHeight="600.0" prefWidth="800.0">
          <children>
-            <Label text="Your bookings">
+            <Label prefHeight="29.0" prefWidth="227.0" text="Your upcoming tours" >
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
@@ -38,7 +38,7 @@
                               <Insets bottom="40.0" top="40.0" />
                            </VBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" fx:id="fxCancelButton" onAction="#cancel" prefHeight="55.0" prefWidth="128.0" text="Cancel Booking">
+                        <Button mnemonicParsing="false" fx:id="fxCancelButton" onAction="#cancel" prefHeight="55.0" prefWidth="128.0" text="Cancel Booking" style="-fx-border-radius: 3; -fx-background-color: #B3E5FC; -fx-border-color: #000000;">
                            <VBox.margin>
                               <Insets bottom="40.0" top="40.0" />
                            </VBox.margin>
