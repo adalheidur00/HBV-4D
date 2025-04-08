@@ -8,7 +8,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Database {
-    private static final String location = "/Users/adalheidur/Desktop/HBV2/HBV-4D/src/main/resources/com/example/hbv4d/db/hbv4d.db";
+    private static final String location = "src/main/resources/com/example/hbv4d/db/hbv4d.db";
     public static Connection connect() {
         String dbPrefix = "jdbc:sqlite:";
         Connection connection;

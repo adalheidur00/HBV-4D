@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb9a4957-c39d-4883-8c00-040e22e92b34" name="Changes" comment="views">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="bb9a4957-c39d-4883-8c00-040e22e92b34" name="Changes" comment="Breyta path í db">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/utils/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/utils/Database.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,6 +159,7 @@
     <MESSAGE value="Update readme" />
     <MESSAGE value="rename" />
     <MESSAGE value="views" />
-    <option name="LAST_COMMIT_MESSAGE" value="views" />
+    <MESSAGE value="Breyta path í db" />
+    <option name="LAST_COMMIT_MESSAGE" value="Breyta path í db" />
   </component>
 </project>
