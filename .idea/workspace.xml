@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb9a4957-c39d-4883-8c00-040e22e92b34" name="Changes" comment="Breyta path í db">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/utils/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hbv4d/utils/Database.java" afterDir="false" />
-    </list>
+    <list default="true" id="bb9a4957-c39d-4883-8c00-040e22e92b34" name="Changes" comment="Breyta path í db" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
